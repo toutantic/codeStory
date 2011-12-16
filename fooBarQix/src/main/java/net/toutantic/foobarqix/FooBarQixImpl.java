@@ -8,10 +8,18 @@ public class FooBarQixImpl implements FooBarQix {
 	}
 
 	public String convert(int number) {
-		return null;
+		return new CodeStoryFooBarQix().convert(number);
 	}
 
 	public String computeFromOneToHundred() {
-		return null;
+		CodeStoryFooBarQix codeStoryFooBarQix = new CodeStoryFooBarQix();
+		StringBuilder builder = new StringBuilder();
+		int currentNumber = 1;
+		for (; currentNumber <= 100; currentNumber++) {
+			builder.append(codeStoryFooBarQix.convert(currentNumber));
+			builder.append("\n");
+		}
+		return builder.toString();
 	}
+
 }
